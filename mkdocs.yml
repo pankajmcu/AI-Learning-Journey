@@ -1,0 +1,55 @@
+site_name: "AI Learning Journey"
+site_description: "Notes, code, and examples from my 5-day AI learning plan"
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.instant
+    - navigation.tabs
+    - content.code.copy
+    - search.suggest
+    - search.share
+    - toc.integrate
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+nav:
+  - Home: index.md
+  - Basics:
+      - basics/index.md
+      - Foundations: basics/foundations.md
+      - Vectors & Embeddings: basics/embeddings.md
+      - Tokenization: basics/tokenization.md
+  - Prompting:
+      - prompting/index.md
+      - Techniques: prompting/techniques.md
+      - Examples: prompting/examples.md
+      - Anti-patterns: prompting/antipatterns.md
+  - Transformers:
+      - transformers/index.md
+      - Attention: transformers/attention.md
+      - Training & Fine-tuning: transformers/fine-tuning.md
+  - LLMs:
+      - llms/index.md
+      - Open Models: llms/open-models.md
+      - Hosted APIs: llms/hosted.md
+  - Agents:
+      - agents/index.md
+      - Tools/Functions: agents/tools.md
+      - Memory: agents/memory.md
+  - Multi-Agents:
+      - multi-agents/index.md
+      - Patterns: multi-agents/patterns.md
+      - Case Studies: multi-agents/cases.md
+  - Showcase:
+      - showcase/index.md
+      - Mini Projects: showcase/mini-projects.md
+  - Resources: resources.md
+  - FAQ: faq.md
+  - Glossary: glossary.md
