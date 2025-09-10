@@ -11,22 +11,22 @@
       
       
       
-        <link rel="prev" href="../llms/">
+        <link rel="prev" href="../embeddings/">
       
       
-        <link rel="next" href="../multi-agents/">
+        <link rel="next" href="../../prompting/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
-        <title>Agents - AI Learning Journey</title>
+        <title>Tokenization - AI Learning Journey</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agents" class="md-skip">
+        <a href="#tokenization" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="AI Learning Journey" class="md-header__button md-logo" aria-label="AI Learning Journey" data-md-component="logo">
+    <a href="../.." title="AI Learning Journey" class="md-header__button md-logo" aria-label="AI Learning Journey" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Agents
+              Tokenization
             
           </span>
         </div>
@@ -178,7 +178,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -195,11 +195,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../basics/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -219,7 +221,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../prompting/" class="md-tabs__link">
+        <a href="../../prompting/" class="md-tabs__link">
           
   
   
@@ -239,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../transformers/" class="md-tabs__link">
+        <a href="../../transformers/" class="md-tabs__link">
           
   
   
@@ -259,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../llms/" class="md-tabs__link">
+        <a href="../../llms/" class="md-tabs__link">
           
   
   
@@ -275,13 +277,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../agents/" class="md-tabs__link">
           
   
   
@@ -301,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../multi-agents/" class="md-tabs__link">
+        <a href="../../multi-agents/" class="md-tabs__link">
           
   
   
@@ -321,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../showcase/" class="md-tabs__link">
+        <a href="../../showcase/" class="md-tabs__link">
           
   
   
@@ -339,7 +339,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../resources/" class="md-tabs__link">
+      <a href="../../resources/" class="md-tabs__link">
         
   
   
@@ -358,7 +358,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../faq/" class="md-tabs__link">
+      <a href="../../faq/" class="md-tabs__link">
         
   
   
@@ -377,7 +377,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../glossary/" class="md-tabs__link">
+      <a href="../../glossary/" class="md-tabs__link">
         
   
   
@@ -414,7 +414,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AI Learning Journey" class="md-nav__button md-logo" aria-label="AI Learning Journey" data-md-component="logo">
+    <a href="../.." title="AI Learning Journey" class="md-nav__button md-logo" aria-label="AI Learning Journey" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -432,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -451,26 +451,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -483,7 +488,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Basics
@@ -497,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -520,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/foundations/" class="md-nav__link">
+      <a href="../foundations/" class="md-nav__link">
         
   
   
@@ -543,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/embeddings/" class="md-nav__link">
+      <a href="../embeddings/" class="md-nav__link">
         
   
   
@@ -563,10 +568,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../basics/tokenization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Tokenization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -577,6 +604,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-tokenization-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Tokenization Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-approximate-token-counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Approximate Token Counting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accurate-token-counting-model-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accurate Token Counting (Model-Specific)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Guidelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -639,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompting/" class="md-nav__link">
+      <a href="../../prompting/" class="md-nav__link">
         
   
   
@@ -662,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompting/techniques.md" class="md-nav__link">
+      <a href="../../prompting/techniques.md" class="md-nav__link">
         
   
   
@@ -685,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompting/examples.md" class="md-nav__link">
+      <a href="../../prompting/examples.md" class="md-nav__link">
         
   
   
@@ -708,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompting/antipatterns.md" class="md-nav__link">
+      <a href="../../prompting/antipatterns.md" class="md-nav__link">
         
   
   
@@ -781,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transformers/" class="md-nav__link">
+      <a href="../../transformers/" class="md-nav__link">
         
   
   
@@ -804,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transformers/attention.md" class="md-nav__link">
+      <a href="../../transformers/attention.md" class="md-nav__link">
         
   
   
@@ -827,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transformers/fine-tuning.md" class="md-nav__link">
+      <a href="../../transformers/fine-tuning.md" class="md-nav__link">
         
   
   
@@ -900,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llms/" class="md-nav__link">
+      <a href="../../llms/" class="md-nav__link">
         
   
   
@@ -923,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llms/open-models.md" class="md-nav__link">
+      <a href="../../llms/open-models.md" class="md-nav__link">
         
   
   
@@ -946,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llms/hosted.md" class="md-nav__link">
+      <a href="../../llms/hosted.md" class="md-nav__link">
         
   
   
@@ -973,31 +1083,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -1010,7 +1115,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Agents
@@ -1021,19 +1126,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../agents/" class="md-nav__link">
         
   
   
@@ -1044,7 +1140,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1057,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools.md" class="md-nav__link">
+      <a href="../../agents/tools.md" class="md-nav__link">
         
   
   
@@ -1080,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory.md" class="md-nav__link">
+      <a href="../../agents/memory.md" class="md-nav__link">
         
   
   
@@ -1153,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-agents/" class="md-nav__link">
+      <a href="../../multi-agents/" class="md-nav__link">
         
   
   
@@ -1176,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-agents/patterns.md" class="md-nav__link">
+      <a href="../../multi-agents/patterns.md" class="md-nav__link">
         
   
   
@@ -1199,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-agents/cases.md" class="md-nav__link">
+      <a href="../../multi-agents/cases.md" class="md-nav__link">
         
   
   
@@ -1272,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../showcase/" class="md-nav__link">
+      <a href="../../showcase/" class="md-nav__link">
         
   
   
@@ -1295,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../showcase/mini-projects.md" class="md-nav__link">
+      <a href="../../showcase/mini-projects.md" class="md-nav__link">
         
   
   
@@ -1325,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   
@@ -1347,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   
@@ -1369,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   
@@ -1400,7 +1495,102 @@
 
 
 
-<h1 id="agents">Agents</h1>
+<h1 id="tokenization">Tokenization</h1>
+<p>Language models do not process raw text directly. Instead, they operate on discrete units called <strong>tokens</strong>.<br />
+A token may represent a whole word, a subword, or even a single character depending on the tokenizer.<br />
+Understanding tokenization is essential for controlling cost, managing context limits, and designing effective prompts.</p>
+<hr />
+<h2 id="why-tokenization-matters">Why Tokenization Matters</h2>
+<ul>
+<li><strong>Cost &amp; efficiency</strong> → most APIs bill per <strong>token</strong> (both input + output).  </li>
+<li><strong>Context limits</strong> → each model has a maximum context window (e.g., 4k, 16k, 128k tokens).  </li>
+<li><strong>Output control</strong> → concise prompts = fewer tokens, lower cost, and more predictable outputs.  </li>
+</ul>
+<hr />
+<h2 id="example-approximate-token-counting">Example: Approximate Token Counting</h2>
+<p>A rough rule of thumb: <strong>1 token ≈ 4 characters of English text</strong>.<br />
+This simple function provides a quick estimate:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rough_token_count</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Quick, language-dependent approximation:</span>
+<span class="sd">    ~1 token per 4 characters of English text.</span>
+<span class="sd">    Use model-specific tokenizers for production accuracy.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">//</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Example</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rough_token_count</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">))</span>  <span class="c1"># ~3</span>
+</code></pre></div>
+<h2 id="explanation">Explanation</h2>
+<p>1) <strong>Divide string length by 4</strong> → gives an approximate token count.</p>
+<p>2) <strong>max(1, …)</strong> ensures even short strings return ≥1 token.</p>
+<p>3) Useful for <strong>early estimation</strong>, but not reliable for non-English text, emojis, or special characters.</p>
+<h2 id="accurate-token-counting-model-specific">Accurate Token Counting (Model-Specific)</h2>
+<p>For precise counts, always use the tokenizer that matches your model.</p>
+<ul>
+<li>
+<p><strong>OpenAI GPT models</strong> → <a href="https://github.com/openai/tiktoken">tiktoken</a></p>
+</li>
+<li>
+<p><strong>Many open models (e.g., LLaMA, T5)</strong> → <a href="https://github.com/google/sentencepiece">SentencePiece</a></p>
+</li>
+<li>
+<p><strong>General concept</strong> → Byte Pair Encoding (BPE)</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Exact token counting with OpenAI&#39;s GPT tokenizer</span>
+<span class="c1"># Install with: pip install tiktoken</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tiktoken</span>
+
+<span class="n">enc</span> <span class="o">=</span> <span class="n">tiktoken</span><span class="o">.</span><span class="n">get_encoding</span><span class="p">(</span><span class="s2">&quot;cl100k_base&quot;</span><span class="p">)</span>  <span class="c1"># encoding for GPT-4</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hello, world!&quot;</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>      <span class="c1"># [9906, 11, 1917, 0]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span> <span class="c1"># exact token count (4 here)</span>
+</code></pre></div>
+<h2 id="explanation_1">Explanation</h2>
+<p>1) <strong>get_encoding("cl100k_base")</strong> loads the tokenizer used by GPT-4.</p>
+<p>2) <strong>encode(text)</strong> converts text → list of token IDs.</p>
+<p>3) <strong>len(tokens)</strong> gives the exact token count.</p>
+<p>4) Results vary by model → always use the tokenizer for the model you plan to run.</p>
+<h2 id="practical-guidelines">Practical Guidelines</h2>
+<ul>
+<li>
+<p>Always budget prompts in tokens, not characters.</p>
+</li>
+<li>
+<p>Place the instruction first and keep it concise.</p>
+</li>
+<li>
+<p>Specify output format (e.g., JSON, bullet points) to compress meaning into fewer tokens.</p>
+</li>
+<li>
+<p>For long docs, chunk into 300–500 tokens with overlap, then re-rank to feed only the most relevant chunks.</p>
+</li>
+<li>
+<p>Limit max_tokens in outputs to control cost and latency.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Fast sanity checks</p>
+</div>
+<ul>
+<li>Use the model vendor’s online tokenizer tool for quick checks.</li>
+<li>Keep a utility function in your repo to measure token counts before sending requests</li>
+</ul>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>
+<p><a href="https://platform.openai.com/tokenizer">OpenAI Tokenizer Tool</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Byte_pair_encoding">Byte Pair Encoding (Wikipedia)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/google/sentencepiece">SentencePiece (Google GitHub)</a></p>
+</li>
+</ul>
 
 
 
@@ -1449,10 +1639,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.tabs", "content.code.copy", "search.suggest", "search.share", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.instant", "navigation.tabs", "content.code.copy", "search.suggest", "search.share", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
