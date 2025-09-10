@@ -795,6 +795,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Transformers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -806,6 +819,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Transformers?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoder-vs-decoder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoder vs Decoder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-scaled-dot-product-attention-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Scaled Dot-Product Attention (Python)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-transformers-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Transformers Matter
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1401,6 +1487,80 @@
 
 
 <h1 id="transformers">Transformers</h1>
+<p>Transformers are a type of neural network architecture introduced in the paper<br />
+<a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need (Vaswani et al., 2017)</a>.<br />
+They form the foundation of most modern large language models (LLMs), including GPT, BERT, and LLaMA.</p>
+<hr />
+<h2 id="why-transformers">Why Transformers?</h2>
+<p>Traditional models like RNNs and LSTMs read sequences step by step,<br />
+which makes training slow and limits their ability to handle long-range context.  </p>
+<p>Transformers use <strong>self-attention</strong>, allowing each token to consider relationships with all other tokens in the sequence, in parallel.</p>
+<p>Example:<br />
+<em>“The animal didn’t cross the street because it was too tired.”</em><br />
+Self-attention links <em>“it” → “animal”</em>, enabling better understanding.</p>
+<hr />
+<h2 id="core-components">Core Components</h2>
+<ol>
+<li><strong>Embedding Layer</strong> — converts tokens into continuous vectors.  </li>
+<li><strong>Positional Encoding</strong> — injects word order into embeddings.  </li>
+<li><strong>Self-Attention</strong> — each word looks at others to find relevant context.  </li>
+<li><strong>Multi-Head Attention</strong> — multiple attention “heads” in parallel for richer relationships.  </li>
+<li><strong>Feed-Forward Networks</strong> — add non-linear transformations.  </li>
+<li><strong>Residual Connections + Layer Norm</strong> — stabilize and speed up training.  </li>
+<li><strong>Stacked Layers</strong> — repeating blocks build depth and power.  </li>
+</ol>
+<hr />
+<h2 id="encoder-vs-decoder">Encoder vs Decoder</h2>
+<ul>
+<li><strong>Encoder</strong> stack: processes input sequences (e.g., BERT).  </li>
+<li><strong>Decoder</strong> stack: generates output sequences (e.g., GPT).  </li>
+<li><strong>Encoder-Decoder</strong>: full translation pipeline (e.g., original Transformer, T5).  </li>
+</ul>
+<hr />
+<h2 id="visualization">Visualization</h2>
+<p><img alt="Transformer Architecture" src="../assets/transformer.jpg" /></p>
+<hr />
+<h2 id="example-scaled-dot-product-attention-python">Example: Scaled Dot-Product Attention (Python)</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">scaled_dot_product_attention</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Q: Queries</span>
+<span class="sd">    K: Keys</span>
+<span class="sd">    V: Values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Step 1: Compute attention scores (dot product)</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+    <span class="c1"># Step 2: Scale by sqrt of dimension</span>
+    <span class="n">d_k</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">scaled_scores</span> <span class="o">=</span> <span class="n">scores</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_k</span><span class="p">)</span>
+
+    <span class="c1"># Step 3: Softmax to get attention weights</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">scaled_scores</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">scaled_scores</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Step 4: Weighted sum of values</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+
+<span class="c1"># Example</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">scaled_dot_product_attention</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">))</span>  <span class="c1"># focuses on first vector</span>
+</code></pre></div>
+<h2 id="why-transformers-matter">Why Transformers Matter</h2>
+<ul>
+<li>
+<p>Parallelizable → much faster training than RNNs/LSTMs.</p>
+</li>
+<li>
+<p>Long-range dependencies → attention links distant words directly.</p>
+</li>
+<li>
+<p>Scalable → billions of parameters, foundation of modern AI.</p>
+</li>
+</ul>
 
 
 

@@ -653,6 +653,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Prompting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -664,6 +677,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompting-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-prompting-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Prompting Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Dive
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1401,6 +1478,131 @@
 
 
 <h1 id="prompting">Prompting</h1>
+<p>Prompting is the practice of instructing a large language model (LLM) to perform a task.<br />
+The structure and clarity of the prompt strongly influence the quality of the response.</p>
+<hr />
+<h2 id="core-principles">Core Principles</h2>
+<ol>
+<li>
+<p><strong>Role</strong> — define the model’s persona  </p>
+<blockquote>
+<p><em>“You are a helpful Python tutor.”</em>  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Goal</strong> — specify the exact task  </p>
+<blockquote>
+<p><em>“Explain decorators in simple terms.”</em>  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Constraints</strong> — add rules  </p>
+<blockquote>
+<p><em>“Use bullet points, max 5 lines.”</em>  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Format</strong> — define output structure  </p>
+<blockquote>
+<p><em>“Return JSON with keys: title, summary.”</em>  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Examples (few-shot)</strong> — show inputs &amp; outputs  </p>
+<blockquote>
+<div class="highlight"><pre><span></span><code>English: Hello → French: Bonjour  
+English: Thank you → French: Merci  
+English: Good night → French:
+</code></pre></div>
+</blockquote>
+</li>
+</ol>
+<hr />
+<h2 id="prompting-techniques">Prompting Techniques</h2>
+<ul>
+<li>
+<p><strong>Zero-shot</strong> → Direct instruction without examples<br />
+<strong>Prompt:</strong>
+<div class="highlight"><pre><span></span><code>Translate &quot;machine learning&quot; into Spanish.
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>aprendizaje automático
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Few-shot</strong> → Include examples to guide behavior<br />
+<strong>Prompt:</strong>
+<div class="highlight"><pre><span></span><code>English: Hello → French: Bonjour
+English: Thank you → French: Merci
+English: Good night → French:
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>Bonne nuit
+</code></pre></div></p>
+</li>
+<li><strong>Chain of Thought (CoT)</strong> → Ask for step-by-step reasoning<br />
+<strong>Prompt:</strong>
+<div class="highlight"><pre><span></span><code>Solve step by step:
+A pen costs $1 and a notebook costs $2. 
+If I buy 3 pens and 2 notebooks, how much do I spend in total?
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>Step 1: Cost of 3 pens = 3 × $1 = $3
+Step 2: Cost of 2 notebooks = 2 × $2 = $4
+Step 3: Total = $3 + $4 = $7
+Final Answer: $7
+</code></pre></div></li>
+<li><strong>ReAct</strong> → Reasoning combined with external actions/tools 
+<strong>Prompt:</strong>
+<div class="highlight"><pre><span></span><code>Task: Find out who won the 2018 FIFA World Cup and explain in one sentence.
+Plan: 
+1. Search for the answer.
+2. Return a short explanation.
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>The 2018 FIFA World Cup was won by France, who defeated Croatia 4–2 in the final.
+</code></pre></div></li>
+<li><strong>Self-critique</strong> → generate, evaluate, and refine outputs<br />
+<strong>Prompt:</strong>
+<div class="highlight"><pre><span></span><code>Write a two-sentence summary of what transformers are. 
+Then critique the summary. 
+Finally, provide an improved version.
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>Initial Summary:
+Transformers are deep learning models that use attention to process sequences. 
+They are widely used for NLP tasks.
+
+Critique:
+The explanation is too brief and lacks context about their significance.
+
+Improved Summary:
+Transformers are neural network architectures built around self-attention, 
+allowing them to model long-range dependencies in text efficiently. 
+They form the foundation of modern large language models used in NLP and beyond.
+</code></pre></div></li>
+</ul>
+<hr />
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<ul>
+<li>Vague requests (<em>“Explain AI.”</em>)  </li>
+<li>Long prompts with key info buried at the end  </li>
+<li>Implicit requirements not stated clearly  </li>
+<li>Missing or inconsistent output format  </li>
+</ul>
+<hr />
+<h2 id="why-prompting-matters">Why Prompting Matters</h2>
+<ul>
+<li>Saves tokens → lower cost &amp; faster responses</li>
+<li>Produces predictable outputs</li>
+<li>Enables automation and evaluation when outputs are structured</li>
+</ul>
+<h2 id="deep-dive">Deep Dive</h2>
+<ul>
+<li><a href="https://www.promptingguide.ai/">Prompt Engineering Guide</a></li>
+<li><a href="https://github.com/openai/openai-cookbook">OpenAI Cookbook</a></li>
+<li><a href="https://arxiv.org/abs/2201.11903">Chain of Thought Reasoning (Wei et al., 2022)</a></li>
+</ul>
 
 
 
